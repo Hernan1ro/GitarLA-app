@@ -24,7 +24,7 @@ const Blog = () => {
   return (
     <Layout pagina="Blog Virtual">
       {console.log(entradas.data)}
-      {entradas.data.map((entrada) => console.log(entrada))}
+      {entradas.data.attributes.map((entrada) => console.log(entrada))}
       {/* <Entrada entradas={entradas} /> */}
     </Layout>
   );
