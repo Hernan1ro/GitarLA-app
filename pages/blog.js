@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import Entrada from "../components/Entrada";
+import styles from "../styles/Blog.module.css";
 import { entradas } from "../API/blogsData.js";
 
 const Blog = () => {
@@ -7,7 +8,7 @@ const Blog = () => {
     <Layout pagina="Blog">
       <main className="contenedor">
         <h2 className="heading">Blog</h2>
-        <div>
+        <div className={styles.blog}>
           {entradas.map((entrada) => (
             <Entrada key={entrada.id} entrada={entrada} />
           ))}

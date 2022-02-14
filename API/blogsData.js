@@ -9,7 +9,7 @@ import blog6 from "../public/img/blog_6.jpg";
 export const entradas = [
   {
     id: uuidv4(),
-    titulo: "20% por Temporada",
+    titulo: "Pasos para aprender a tocar guitarra",
     resumen:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut quo fugit, earum fugiat aliquid voluptatibus. Ducimus, porro? Maiores quos quasi alias in dolore.",
     contenido:

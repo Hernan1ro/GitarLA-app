@@ -9,12 +9,14 @@ const Header = () => {
       <div className="contenedor">
         <div className={styles.barra}>
           <Link href="/">
-            <Image
-              src="/img/logo.svg"
-              width={400}
-              height={100}
-              alt="Page logo"
-            />
+            <a>
+              <Image
+                src="/img/logo.svg"
+                width={400}
+                height={100}
+                alt="Page logo"
+              />
+            </a>
           </Link>
           <nav className={styles.navegacion}>
             <Link href="/">Inicio</Link>
