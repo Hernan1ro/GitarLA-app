@@ -1,7 +1,7 @@
 import React from "react";
 
-const Entrada = ({ entradas }) => {
-  // console.log(entradas);
+const Entrada = (entrada) => {
+  console.log(entrada);
   return (
     <article>
       <h1>{"titulo"}</h1>

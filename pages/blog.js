@@ -1,31 +1,13 @@
-import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import Entrada from "../components/Entrada";
+import { entradas } from "../API/blogsData.js";
 
 const Blog = () => {
-  const [entradas, setEntradas] = useState([]);
-  const [imagenes, setImagenes] = useState([]);
-
-  useEffect(() => {
-    async function consultarAPI() {
-      const url1 = "http://localhost:1337/api/blogs";
-      const url2 =
-        "https://pixabay.com/api/?key=8502071-1f57c63cc805c2d86e5bf513a&q=guitar";
-      const promesas = [fetch(url1), fetch(url2)];
-      const respuesta = await Promise.all(promesas);
-      const resultado1 = await respuesta[0].json();
-      const resultado2 = await respuesta[1].json();
-      setEntradas(resultado1);
-      setImagenes(resultado2);
-    }
-    consultarAPI();
-  }, []);
-  // console.log(entradas.data);
   return (
     <Layout pagina="Blog Virtual">
-      {console.log(entradas.data)}
-      {entradas.data.attributes.map((entrada) => console.log(entrada))}
-      {/* <Entrada entradas={entradas} /> */}
+      {entradas.map((entrada) => (
+        <Entrada entrada={entrada} />
+      ))}
     </Layout>
   );
 };
