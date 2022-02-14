@@ -15,6 +15,7 @@ export const entradas = [
     contenido:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quas quos neque in architecto, delectus pariatur labore est molestias voluptatem minus alias quisquam quibusdam magni porro, magnam nam perferendis? Sint consectetur eligendi expedita nisi, dolores ex magnam ea saepe. Tempore eum neque dolor officia voluptate ipsa. Incidunt quam aliquam nam?",
     imagen: blog1,
+    published_at: "14 de febrero de 2022",
   },
   {
     id: uuidv4(),
@@ -24,6 +25,7 @@ export const entradas = [
     contenido:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quas quos neque in architecto, delectus pariatur labore est molestias voluptatem minus alias quisquam quibusdam magni porro, magnam nam perferendis? Sint consectetur eligendi expedita nisi, dolores ex magnam ea saepe. Tempore eum neque dolor officia voluptate ipsa. Incidunt quam aliquam nam?",
     imagen: blog2,
+    published_at: "14 de febrero de 2022",
   },
   {
     id: uuidv4(),
@@ -33,6 +35,7 @@ export const entradas = [
     contenido:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quas quos neque in architecto, delectus pariatur labore est molestias voluptatem minus alias quisquam quibusdam magni porro, magnam nam perferendis? Sint consectetur eligendi expedita nisi, dolores ex magnam ea saepe. Tempore eum neque dolor officia voluptate ipsa. Incidunt quam aliquam nam?",
     imagen: blog3,
+    published_at: "14 de febrero de 2022",
   },
   {
     id: uuidv4(),
@@ -42,6 +45,7 @@ export const entradas = [
     contenido:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quas quos neque in architecto, delectus pariatur labore est molestias voluptatem minus alias quisquam quibusdam magni porro, magnam nam perferendis? Sint consectetur eligendi expedita nisi, dolores ex magnam ea saepe. Tempore eum neque dolor officia voluptate ipsa. Incidunt quam aliquam nam?",
     imagen: blog4,
+    published_at: "14 de febrero de 2022",
   },
   {
     id: uuidv4(),
@@ -51,6 +55,7 @@ export const entradas = [
     contenido:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quas quos neque in architecto, delectus pariatur labore est molestias voluptatem minus alias quisquam quibusdam magni porro, magnam nam perferendis? Sint consectetur eligendi expedita nisi, dolores ex magnam ea saepe. Tempore eum neque dolor officia voluptate ipsa. Incidunt quam aliquam nam?",
     imagen: blog5,
+    published_at: "14 de febrero de 2022",
   },
   {
     id: uuidv4(),
@@ -60,5 +65,6 @@ export const entradas = [
     contenido:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quas quos neque in architecto, delectus pariatur labore est molestias voluptatem minus alias quisquam quibusdam magni porro, magnam nam perferendis? Sint consectetur eligendi expedita nisi, dolores ex magnam ea saepe. Tempore eum neque dolor officia voluptate ipsa. Incidunt quam aliquam nam?",
     imagen: blog6,
+    published_at: "14 de febrero de 2022",
   },
 ];

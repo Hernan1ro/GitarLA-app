@@ -4,10 +4,15 @@ import { entradas } from "../API/blogsData.js";
 
 const Blog = () => {
   return (
-    <Layout pagina="Blog Virtual">
-      {entradas.map((entrada) => (
-        <Entrada entrada={entrada} />
-      ))}
+    <Layout pagina="Blog">
+      <main className="contenedor">
+        <h2 className="heading">Blog</h2>
+        <div>
+          {entradas.map((entrada) => (
+            <Entrada key={entrada.id} entrada={entrada} />
+          ))}
+        </div>
+      </main>
     </Layout>
   );
 };
