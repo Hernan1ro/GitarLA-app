@@ -3,10 +3,11 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { entradas } from "../../API/blogsData.js";
 import Layout from "../../components/Layout";
+import styles from "../../styles/Entrada.module.css";
 
 const EntradaBlog = () => {
   const router = useRouter(); //obtener id de la id
-
+  console.log(entradas);
   return (
     <Layout>
       {entradas.map((entrada) => {
@@ -16,7 +17,7 @@ const EntradaBlog = () => {
           return (
             <main key={id}>
               <h1 className="heading">{titulo}</h1>
-              <article>
+              <article className={styles.entrada}>
                 <img
                   layout="responsive"
                   width={800}
@@ -24,9 +25,9 @@ const EntradaBlog = () => {
                   src={imagen.src}
                   alt={`Imagen entrada ${titulo}`}
                 />
-                <div>
-                  <p>{published_at}</p>
-                  <p>{contenido}</p>
+                <div className={styles.contenido}>
+                  <p className={styles.fecha}>{published_at}</p>
+                  <p className={styles.texto}>{contenido}</p>
                 </div>
               </article>
             </main>
