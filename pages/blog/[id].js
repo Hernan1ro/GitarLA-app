@@ -12,6 +12,7 @@ const EntradaBlog = () => {
       {entradas.map((entrada) => {
         if (entrada.id === router.query.id) {
           const { titulo, imagen, contenido, published_at, id } = entrada;
+          console.log(entrada);
           return (
             <main key={id}>
               <h1 className="heading">{titulo}</h1>
