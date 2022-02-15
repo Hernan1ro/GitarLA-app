@@ -9,7 +9,7 @@ const EntradaBlog = () => {
   const router = useRouter(); //obtener id de la id
   console.log(entradas);
   return (
-    <Layout>
+    <Layout pagina={"Blog"}>
       {entradas.map((entrada) => {
         if (entrada.id === router.query.id) {
           const { titulo, imagen, contenido, published_at, id } = entrada;
