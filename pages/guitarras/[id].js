@@ -26,6 +26,20 @@ const Producto = () => {
                   <h3>{nombre}</h3>
                   <p className={styles.descripcion}>{descripcion}</p>
                   <p className={styles.precio}>${precio}</p>
+                  <form action="" className={styles.formulario}>
+                    <label htmlFor="cantidad">Cantidad:</label>
+                    <select name="cantidad" id="">
+                      <option value="">--Seleccione una cantidad--</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                    </select>
+                    <input type="submit" value="Agregar al carrito" />
+                  </form>
                 </div>
               </div>
             </Layout>
