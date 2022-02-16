@@ -1,5 +1,7 @@
+import styles from "../styles/Curso.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import cursos_bg from "../public/img/cursos_bg.jpg";
 
 const Curso = () => {
   return (
@@ -15,6 +17,22 @@ const Curso = () => {
           <a href="#">Más información</a>
         </div>
       </div>
+      <style jsx>
+        {`
+          section {
+            padding: 10rem 0;
+            margin-top: 10rem;
+            background-image: linear-gradient(
+                to right,
+                rgb(0 0 0/ 0.65),
+                rgb(0 0 0 /0.7)
+              ),
+              url(${cursos_bg.src});
+            background-size: cover;
+            background-position: center;
+          }
+        `}
+      </style>
     </section>
   );
 };
