@@ -6,15 +6,17 @@ import cursos_bg from "../public/img/cursos_bg.jpg";
 const Curso = () => {
   return (
     <section>
-      <div className="contenedor">
-        <div>
-          <h2>Aprende a tocar guitarra</h2>
-          <p>
+      <div className={`contenedor ${styles.grid}`}>
+        <div className={styles.contenido}>
+          <h2 className={"heading"}>Aprende a tocar guitarra</h2>
+          <p className={styles.texto}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, optio
             tempore. Architecto veniam quisquam odit tempora accusamus?
             Consequuntur, quisquam quod eveniet id veniam eos accusantium!
           </p>
-          <a href="#">Más información</a>
+          <a className={styles.enlace} href="#">
+            Más información
+          </a>
         </div>
       </div>
       <style jsx>
