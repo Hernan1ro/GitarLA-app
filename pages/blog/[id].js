@@ -18,7 +18,7 @@ const EntradaBlog = () => {
             <main key={id}>
               <h1 className="heading">{titulo}</h1>
               <article className={styles.entrada}>
-                <img
+                <Image
                   layout="responsive"
                   width={800}
                   height={600}
