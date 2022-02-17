@@ -46,3 +46,47 @@
 .navegacion a:hover {
   background-color: var(--primary);
 }
+.modelo {
+  color: var(--blanco);
+  margin-top: 5rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .modelo {
+    text-align: left;
+    width: 50%;
+  }
+}
+.modelo h2 {
+  font-size: 5rem;
+}
+.modelo p:first-of-type {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 2rem;
+}
+.precio {
+  font-size: 6rem;
+  color: var(--primary);
+  font-weight: 900;
+  line-height: 0;
+}
+.enlace {
+  margin-top: 2rem;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--blanco);
+  border: 2px solid var(--primary);
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  padding: 1rem 5rem;
+}
+.enlace:hover {
+  background-color: var(--primary);
+  color: var(--blanco);
+}

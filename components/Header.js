@@ -27,12 +27,12 @@ const Header = ({ guitarra }) => {
           </nav>
         </div>
         {guitarra && (
-          <div>
-            <h1>Model {guitarra.nombre}</h1>
+          <div className={styles.modelo}>
+            <h2>Model {guitarra.nombre}</h2>
             <p>{guitarra.descripcion}</p>
-            <p>${guitarra.precio}</p>
+            <p className={styles.precio}>${guitarra.precio}</p>
             <Link href={`/guitarras/${guitarra.id}`}>
-              <a>Ver producto</a>
+              <a className={styles.enlace}>Ver producto</a>
             </Link>
           </div>
         )}
