@@ -8,6 +8,7 @@
   padding: 5rem 0;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 .barra {
   display: flex;
@@ -27,6 +28,8 @@
   margin-top: 5rem;
   display: flex;
   gap: 2rem;
+  position: relative;
+  z-index: 1;
 }
 @media (min-width: 768px) {
   .navegacion {
@@ -89,4 +92,15 @@
 .enlace:hover {
   background-color: var(--primary);
   color: var(--blanco);
+}
+.guitarra {
+  display: none;
+}
+@media (min-width: 992px) {
+  .guitarra {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+  }
 }

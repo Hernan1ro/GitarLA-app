@@ -2,9 +2,11 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Header.module.css";
+import { useRouter } from "next/router";
 
 const Header = ({ guitarra }) => {
-  console.log(guitarra);
+  const router = useRouter();
+
   return (
     <header className={styles.header}>
       <div className="contenedor">
@@ -37,6 +39,17 @@ const Header = ({ guitarra }) => {
           </div>
         )}
       </div>
+      {router.pathname === "/" && (
+        <div className={styles.guitarra}>
+          <Image
+            src="/img/header_guitarra.png"
+            alt="Header guitarra"
+            layout="fixed"
+            width={500}
+            height={1200}
+          />
+        </div>
+      )}
     </header>
   );
 };
