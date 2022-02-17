@@ -3,7 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Header.module.css";
 
-const Header = () => {
+const Header = ({ guitarra }) => {
+  console.log(guitarra);
   return (
     <header className={styles.header}>
       <div className="contenedor">
@@ -25,6 +26,16 @@ const Header = () => {
             <Link href="/tienda">Tienda</Link>
           </nav>
         </div>
+        {guitarra && (
+          <div>
+            <h1>Model {guitarra.nombre}</h1>
+            <p>{guitarra.descripcion}</p>
+            <p>${guitarra.precio}</p>
+            <Link href={`/guitarras/${guitarra.id}`}>
+              <a>Ver producto</a>
+            </Link>
+          </div>
+        )}
       </div>
     </header>
   );

@@ -6,13 +6,15 @@ import ListadoBlog from "../components/ListadoBlog";
 
 export default function Home() {
   return (
-    <Layout pagina="Inicio">
+    <Layout pagina="Inicio" guitarra={guitarras[3]}>
       <main className="contenedor">
         <h1 className="heading">Nuestra colección</h1>
         <Listado guitarras={guitarras} />
       </main>
       <Curso />
-      <ListadoBlog blogs={3} />
+      <section className="contenedor">
+        <ListadoBlog blogs={3} />
+      </section>
     </Layout>
   );
 }
