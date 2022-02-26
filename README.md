@@ -1,6 +1,3 @@
-# GitarLA-app
-
-
 
 <p align="center">
     <a href="">
@@ -8,7 +5,7 @@
     </a>
 </p>
 
-<h1 id="web">AGENCIA DE VIAJES web page</h1>
+<h1 id="web">GuitarLA</h1>
 
 This a web site for the GitarLA a guitar store with blogs, courses and more!
 
