@@ -1,7 +1,8 @@
 import Layout from "../components/Layout";
 import styles from "../styles/Carrito.module.css";
 
-const Carrito = () => {
+const Carrito = ({ carrito }) => {
+  console.log(carrito);
   return (
     <Layout pagina={"Carrito"}>
       <h1 className="heading">Carrito</h1>

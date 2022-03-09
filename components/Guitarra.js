@@ -4,6 +4,7 @@ import styles from "../styles/Guitarra.module.css";
 
 const Guitarra = ({ guitarra }) => {
   const { nombre, descripcion, id, precio, imagen } = guitarra;
+
   return (
     <div className={styles.guitarra}>
       <Image

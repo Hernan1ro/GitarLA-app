@@ -4,9 +4,12 @@ import { guitarras } from "../../API/guitarrasData";
 import styles from "../../styles/Guitarra.module.css";
 import Layout from "../../components/Layout";
 
-const Producto = () => {
+const Producto = ({ guardarCarrito }) => {
   const router = useRouter();
-  console.log(router.query.id);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    //Guardar datos en carrito
+  };
   return (
     <>
       {guitarras.map((guitarra) => {
@@ -26,7 +29,11 @@ const Producto = () => {
                   <h3>{nombre}</h3>
                   <p className={styles.descripcion}>{descripcion}</p>
                   <p className={styles.precio}>${precio}</p>
-                  <form action="" className={styles.formulario}>
+                  <form
+                    onSubmit={handleSubmit}
+                    action=""
+                    className={styles.formulario}
+                  >
                     <label htmlFor="cantidad">Cantidad:</label>
                     <select name="cantidad" id="">
                       <option value="">--Seleccione una cantidad--</option>
