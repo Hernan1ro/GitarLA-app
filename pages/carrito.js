@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import styles from "../styles/Carrito.module.css";
 import Image from "next/image";
 
-const Carrito = ({ carrito }) => {
+const Carrito = ({ carrito, actualizarCantidad }) => {
   return (
     <Layout pagina={"Carrito"}>
       <h1 className="heading">Carrito</h1>
@@ -22,9 +22,29 @@ const Carrito = ({ carrito }) => {
                   </div>
                   <div>
                     <p className={styles.nombre}>{producto.nombre}</p>
-                    <p className={styles.cantidad}>
-                      Cantidad: {producto.cantidad}
-                    </p>
+                    <div className={styles.cantidad}>
+                      <p>Cantidad:</p>
+                      <select
+                        className={styles.select}
+                        value={producto.cantidad}
+                        name="cantidad"
+                        onChange={(e) =>
+                          actualizarCantidad({
+                            cantidad: e.target.value,
+                            id: producto.id,
+                          })
+                        }
+                      >
+                        <option value="">--Seleccione una cantidad--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                      </select>
+                    </div>
                     <p className={styles.precio}>
                       $ <span>{producto.precio}</span>{" "}
                     </p>

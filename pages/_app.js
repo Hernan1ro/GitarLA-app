@@ -19,7 +19,15 @@ function MyApp({ Component, pageProps }) {
       setCarrito([...carrito, elemento]);
     }
   };
-
+  const actualizarCantidad = (producto) => {
+    const carritoActualizado = carrito.map((articulo) => {
+      if (articulo.id === producto.id) {
+        articulo.cantidad = producto.cantidad;
+      }
+      return articulo;
+    });
+    setCarrito(carritoActualizado);
+  };
   useEffect(() => {
     const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
     setCarrito(carritoLS);
@@ -34,6 +42,7 @@ function MyApp({ Component, pageProps }) {
       {...pageProps}
       carrito={carrito}
       guardarCarrito={guardarCarrito}
+      actualizarCantidad={actualizarCantidad}
     />
   );
 }
