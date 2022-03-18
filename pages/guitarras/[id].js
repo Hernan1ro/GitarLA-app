@@ -5,12 +5,16 @@ import { guitarras } from "../../API/guitarrasData";
 import styles from "../../styles/Guitarra.module.css";
 import Layout from "../../components/Layout";
 
-const Producto = ({ guardarCarrito }) => {
+const Producto = ({ guardarCarrito, carrito }) => {
   const [cantidad, setCantidad] = useState(1);
   const [guitarra, setGuitarra] = useState({});
   const router = useRouter();
 
   const handleSubmit = (e) => {
+    if (cantidad < 0) {
+      alert("Cantidad no válida");
+      return;
+    }
     e.preventDefault();
     const { imagen, nombre, precio, id } = guitarra;
     //Guardar datos en carrito
@@ -21,11 +25,17 @@ const Producto = ({ guardarCarrito }) => {
       id,
       cantidad,
     };
+    const hayCarrito = carrito.includes((item) => item.id === id);
+    if (hayCarrito) {
+      console.log("si hay guitarra");
+    } else {
+      console.log("no hay guitarra");
+    }
     guardarCarrito(objGuitarra);
+    console.log(objGuitarra);
   };
-  const selectGuitarra = (cantidad, guitarra) => {
+  const selectGuitarra = (cantidad) => {
     setCantidad(cantidad);
-    setGuitarra(guitarra);
   };
   return (
     <>
@@ -54,9 +64,7 @@ const Producto = ({ guardarCarrito }) => {
                     <label htmlFor="cantidad">Cantidad:</label>
                     <select
                       value={cantidad}
-                      onChange={(e) =>
-                        selectGuitarra(Number(e.target.value), guitarra)
-                      }
+                      onChange={(e) => selectGuitarra(Number(e.target.value))}
                       name="cantidad"
                       id=""
                     >
@@ -69,7 +77,11 @@ const Producto = ({ guardarCarrito }) => {
                       <option value="6">6</option>
                       <option value="7">7</option>
                     </select>
-                    <input type="submit" value="Agregar al carrito" />
+                    <input
+                      onClick={() => setGuitarra(guitarra)}
+                      type="submit"
+                      value="Agregar al carrito"
+                    />
                   </form>
                 </div>
               </div>
