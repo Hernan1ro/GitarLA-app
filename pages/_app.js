@@ -1,9 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/normalize.css";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   const [carrito, setCarrito] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }, [carrito]);
+
+  useEffect(() => {
+    const carritoLS = JSON.parse(localStorage.getItem("carrito")) && [];
+    setCarrito(carritoLS);
+  }, []);
+
   const guardarCarrito = (elemento) => {
     const hayCarrito = carrito.some((item) => item.id === elemento.id);
     if (hayCarrito) {
