@@ -5,15 +5,6 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   const [carrito, setCarrito] = useState([]);
 
-  useEffect(() => {
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-  }, [carrito]);
-
-  useEffect(() => {
-    const carritoLS = JSON.parse(localStorage.getItem("carrito")) && [];
-    setCarrito(carritoLS);
-  }, []);
-
   const guardarCarrito = (elemento) => {
     const hayCarrito = carrito.some((item) => item.id === elemento.id);
     if (hayCarrito) {
@@ -25,10 +16,19 @@ function MyApp({ Component, pageProps }) {
       });
       setCarrito(carritoActualizado);
     } else {
-      console.log("no hay guitarra repetida");
       setCarrito([...carrito, elemento]);
     }
   };
+
+  useEffect(() => {
+    const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
+    setCarrito(carritoLS);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }, [carrito]);
+
   return (
     <Component
       {...pageProps}
