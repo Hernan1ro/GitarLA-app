@@ -25,14 +25,7 @@ const Producto = ({ guardarCarrito, carrito }) => {
       id,
       cantidad,
     };
-    const hayCarrito = carrito.includes((item) => item.id === id);
-    if (hayCarrito) {
-      console.log("si hay guitarra");
-    } else {
-      console.log("no hay guitarra");
-    }
     guardarCarrito(objGuitarra);
-    console.log(objGuitarra);
   };
   const selectGuitarra = (cantidad) => {
     setCantidad(cantidad);
