@@ -1,16 +1,12 @@
-
 <p align="center">
-    <a href="">
-        <img src="#" height="100" alt="GuitarLA"/>
+    <a href="https://guitarla-next-hernan1ro.vercel.app/">
+        <img src="./logo.svg" height="100" alt="GuitarLA"/>
     </a>
 </p>
 
-<h1 id="web">GuitarLA</h1>
-
 This a web site for the GitarLA a guitar store with blogs, courses and more!
 
-You can see the live preview → [GuitarLA](https://cryptic-brushlands-37446.herokuapp.com/).
-
+You can see the live preview → [GuitarLA](https://guitarla-next-hernan1ro.vercel.app/).
 
 <h2 id="scripts">🏁 Getting started</h2>
 Download the project and then execute <strong>npm install</strong> <strong>npm run start</strong>
@@ -19,15 +15,8 @@ Download the project and then execute <strong>npm install</strong> <strong>npm r
 
 <h2 id="preview">🔍 Preview</h2>
 
-<details>
-  <summary id="desktop">💻 Desktop version</summary>    
-  <img src="./desktopview.png" alt="Desktop view">
-</details>
+  <img src="./desktopview.gif" alt="Desktop view">
 
-<details>
-  <summary id="mobile">📱 Mobile version</summary>  
-  <img src="./mobileview.png" alt="Mobile view">
-</details>
 <br>
 <br>
 <h2 id="technologies">📲 Technologies</h2>
